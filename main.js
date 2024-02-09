@@ -19,22 +19,22 @@ function createWindow() {
   mainWindow.minimize();
 }
 
-// When Electron has finished initialization and is ready to create browser windows.
+// create browser windows.
 app.whenReady().then(() => {
   createWindow();
   createTray();
-  // Execute the schedulePopup function every 20 minutes
+  // Execute every 20 minutes
   setInterval(schedulePopup, 20 * 60 * 1000);
 });
 
-// Quit when all windows are closed, except on macOS
+// Quit when all windows are closed,
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
     app.quit();
   }
 });
 
-// On macOS, recreate a window when dock icon is clicked and there are no other windows open
+// dock icon
 app.on('activate', () => {
   if (BrowserWindow.getAllWindows().length === 0) {
     createWindow();
