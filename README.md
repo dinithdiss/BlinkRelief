@@ -10,7 +10,7 @@ interval period is 20 secoends.
 
 ## Features
 - Showing rest time of eyes every 20 minutes and pop-up 20 seconds.
-- You can use .bat file to run this electron app (In-One-Click)
+- You can create .bat file to run this electron app (In-One-Click)
 
 ## Technology
 
