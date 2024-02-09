@@ -71,7 +71,7 @@ function schedulePopup() {
 }
 
 function createTray() {
-  tray = new Tray(path.join(__dirname, 'loading-42.png')); // Replace 'tray-icon.png' with the path to your tray icon
+  tray = new Tray(path.join(__dirname, 'loading-42.png'));
   const contextMenu = Menu.buildFromTemplate([
     { label: 'Open App', click: () => mainWindow.show() },
     { label: 'Quit', click: () => app.quit() }
